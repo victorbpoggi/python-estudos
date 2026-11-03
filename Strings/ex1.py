@@ -1,10 +1,9 @@
-L=list("Alô Mundo")
-L[0]="a"
-print(L)
+# Escreva um programa que leia duas strings. Verifique se a segunda ocorre dentro da primeira e imprima a posição de início.
+# 1ª string: AABBEFAATT
+# 2ª string: BE
+# Resultado: BE encontrado na posição 3 de AABBEFAATT
 
-## ['a', 'l', 'ô', ' ', 'M', 'u', 'n', 'd', 'o']
+palavra = input("Digite qualquer coisa: ")
+palavra2 = input("Digite qualquer coisa: ")
 
-s ="".join(L)
-print(s)
 
-## alô Mundo
