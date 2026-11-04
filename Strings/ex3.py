@@ -9,5 +9,12 @@ frase2 = input("Digite: ")
 
 frase3 = ""
 
+for letra in frase:
+    if letra not in frase2:
+        frase3 += letra
+
+for letra in frase2:
+    if letra not in frase:
+        frase3 += letra
 
 print(f"3ª string: {frase3}")
