@@ -59,56 +59,88 @@ com todos os caracteres maiúsculos. Veja os exemplos
 ##  Exemplos de conversão em maiúsculas e minúsculas
 
 s = "O Rato roeu a roupa do Rei de Roma"
->>> s.lower()
+
+ s.lower()
+
 'o rato roeu a roupa do rei de roma'
->>> s.upper()
+
+s.upper()
+
 'O RATO ROEU A ROUPA DO REI DE ROMA'
->>> s.lower().startswith("o rato")
+
+s.lower().startswith("o rato")
+
 True
->>> s.upper().startswith("O RATO")
+
+s.upper().startswith("O RATO")
+
 True
 
 Não se esqueça de comparar com uma string onde todos os caracteres são maiúsculos ou minúsculos, dependendo se você utilizou *upper* ou *lower*, respectivamente. Outra forma de verificar se uma palavra pertence a uma string é utilizando o operador **in**. Vejamos os exemplo
 
 ## Pesquisa de palavras em uma string usando in
 
->>> s="Maria Amélia Souza"
->>> "Amélia" in s
+
+s="Maria Amélia Souza"
+
+"Amélia" in s
+
 True
->>> "Maria" in s
+
+"Maria" in s
+
 True
->>> "Souza" in s
+
+"Souza" in s
+
 True
->>> "a A" in s
+
+"a A" in s
+
 True
->>> "amélia" in s
+
+"amélia" in s
+
 False
 
 Você também pode testar se uma string não está contida em outra, utilizando **not in**
 
 ## Pesquisa de palavras em uma string usando not in 
 
->>> s="Todos os caminhos levam a Roma"
->>> "levam" not in s
+s="Todos os caminhos levam a Roma"
+
+"levam" not in s
+
 False
->>> "Caminhos" not in s
+
+"Caminhos" not in s
+
 True
->>> "AS" not in s
+
+"AS" not in s
+
 True
 
 Veja que aqui também letras maiúsculas e minúsculas são diferentes. Você pode combinar lower e upper com in e not in para ignorar esse tipo de diferença.
 
 ##  Combinação de lower e upper com in e not in
 
->>> s="João comprou um carro"
->>> "joão" in s.lower()
-True
->>> "CARRO" in s.upper()
+s="João comprou um carro"
+
+"joão" in s.lower()
 
 True
->>> "comprou" not in s.lower()
+
+"CARRO" in s.upper()
+
+True
+
+"comprou" not in s.lower()
+
 False
->>> "barco" not in s.lower()
+
+"barco" not in s.lower()
+
 True
 
 O operador in também pode ser utilizado com listas normais, facilitando, assim, a pesquisa de elementos dentro de uma lista.
@@ -120,14 +152,14 @@ utilize o método *count*. Veja o exemplo
 
 ##  Contagem de letra e palavras
 
->>> t="um tigre, dois tigres, três tigres"
->>> t.count("tigre")
+t="um tigre, dois tigres, três tigres"
+t.count("tigre")
 3
->>> t.count("tigres")
+t.count("tigres")
 2
->>> t.count("t")
+t.count("t")
 4
->>> t.count("z")
+t.count("z")
 0
 
 ## 7.3 Pesquisa de strings
@@ -136,10 +168,14 @@ Para pesquisar se uma string está dentro de outra e obter a posição da primei
 
 ## Pesquisa de strings com find
 
->>> s="Alô mundo"
->>> s.find("mun")
-4
->>> s.find("ok")
+ s="Alô mundo"
+
+ s.find("mun")
+ 
+ 4
+
+s.find("ok")
+
 -1
 
 Caso a string seja encontrada, você obterá um valor maior ou igual a zero, ou
@@ -150,10 +186,14 @@ Se o objetivo for pesquisar, mas da direita para a esquerda, utilize o método *
 que realiza essa tarefa.
 
 ##  Pesquisa de strings com rfind
->>> s="Um dia de sol"
->>> s.rfind("d")
+s="Um dia de sol"
+
+s.rfind("d")
+
 7
->>> s.find("d")
+
+s.find("d")
+
 3
 
 Tanto find quanto *rfind* suportam duas opções adicionais: início (*start*) e fim
@@ -163,16 +203,26 @@ considerar na pesquisa.
 
 ##  Pesquisa de strings, limitando o início ou o fim
 
->>> s="um tigre, dois tigres, três tigres"
->>> s.find("tigres")
+s="um tigre, dois tigres, três tigres"
+ 
+ s.find("tigres")
+
 15
->>> s.rfind("tigres")
+
+s.rfind("tigres")
+
 28
->>> s.find("tigres",7) #início=7
+
+s.find("tigres",7) #início=7
+
 15
->>> s.find("tigres",30) #início=30
+
+s.find("tigres",30) #início=30
+
 -1
->>> s.find("tigres",0,10) #início=0 fim=10
+
+s.find("tigres",0,10) #início=0 fim=10
+
 -1
 
 Podemos usar o valor retornado por *find* e *rfind* para achar todas as ocorrências da string. Por exemplo, o programa da listagem.

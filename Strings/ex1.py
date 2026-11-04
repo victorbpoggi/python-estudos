@@ -6,4 +6,6 @@
 palavra = input("Digite qualquer coisa: ")
 palavra2 = input("Digite qualquer coisa: ")
 
+print(palavra2 in palavra)
+print(f"BE encontrado na posição {palavra.find("BE")} de {palavra}")
 
