@@ -7,19 +7,19 @@ while True:
     notas = float(input())
     if notas == -1:
         break
-    if notas > 10:
-        print("NOTA INVALIDAS")
+    if notas < 0 or notas > 10:
+        print("NOTA INVALIDA")
         continue
     if notas >= 7:
-        aprovados =+ 1
-        continue
+        aprovados += 1
+        
     if cont == 0:
         maior = notas
         menor = notas
     else:
         if notas > maior:
             maior = notas
-        if notas < maior:
+        if notas < menor:
             menor = notas
     cont += 1
     soma += notas

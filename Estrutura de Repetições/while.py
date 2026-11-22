@@ -38,3 +38,5 @@ while questão <= 3:
         pontos = pontos + 1
     questão +=1
 print("O aluno fez %d ponto(s)" % pontos)
+
+# Acumuladores
