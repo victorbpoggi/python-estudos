@@ -29,3 +29,52 @@ while True:
     if escolhido == 0:
         break
     print(f"Você escolheu o número: {numeros[escolhido - 1]}") #fizemos a operação inversa. (2-1) = índice 1 = 20.
+
+#Cópia e fatiamento de listas
+#Embora listas em Python sejam um recurso muito poderoso, todo poder traz responsabilidades. Amei essa frase kkkkk
+
+#Um dos efeitos colaterais de listas aparece quando tentamos fazer cópias. 
+
+L = [1,2,3,4,5]
+V=L
+print(L)
+print(V)
+V[0] = 6
+print(V)
+print(L)
+
+#Adição de elementos
+
+a = []
+a.append("Victor")
+a.append(100)
+print(a)
+
+# Adição de elementos à lista
+L = []
+while True:
+    n=int(input("Digite um número (0 sai): "))
+    if n == 0:
+        break
+    L.append(n)
+x=0       #ex: 3
+while x <= len(L): #x < len(L), pois não sabemos quantos elementos a lita vai ter
+    print(L[x])
+    x=x+1
+
+# Impressão de todos os elementos da lista com for
+c = [33 , 12, 7]
+for v in c:
+    print(v)
+
+
+
+
+
+
+
+
+
+
+
+
