@@ -16,16 +16,17 @@ outros = 0
 
 for i in range(5):
     codigo = int(input("Informe o código que será utilizado: "))
+    if codigo < 1 or codigo > 4:
+        print("Digite entre 1-4")
+        continue
     if codigo == 1:
         banho += 1
-    elif codigo == 2:
+    if codigo == 2:
         tosas += 1
-    elif codigo == 3:
+    if codigo == 3:
         banho_tosa += 1
-    elif codigo == 4:
+    if codigo == 4:
         outros += 1
-    else:
-        print("Digite entre 1-4")
 print(f"Foram solicitados {banho} banhos.")
 print(f"Foram solicitados {tosas} tosas.")
 print(f"Foram solicitados {banho_tosa} banhos e tosas.")
