@@ -58,7 +58,7 @@ while True:
         break
     L.append(n)
 x=0       #ex: 3
-while x <= len(L): #x < len(L), pois não sabemos quantos elementos a lita vai ter
+while x <= len(L): #x < len(L), pois não sabemos quantos elementos a lista vai ter
     print(L[x])
     x=x+1
 
@@ -67,12 +67,33 @@ c = [33 , 12, 7]
 for v in c:
     print(v)
 
+#Uso da função range #a função range n retorna uma lista mas sim um gerador.
+for v in range(10):
+    print(v)
 
+#Uso da função range com intervalos
+for v in range(5, 8):
+    print(v)
 
+# Uso da função range com saltos
+for t in range(3,33,3):
+    print(t, end=" ")
+print()
+# Enumerate
+# Impressão de índices usando a função enumerate
+c = [33 , 12, 7]
+for x, v in enumerate(c):
+    print(f"[x,v] {x,v}")
 
-
-
-
+#  Pesquisa usando for
+L=[7,9,10,12]
+p=int(input("Digite um número a pesquisar:"))
+for e in L:
+    if e == p:
+        print("Elemento encontrado!")
+        break 
+else: 
+    print("Elemento não encontrado.")
 
 
 
